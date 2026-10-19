@@ -8,43 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Wartung · helvetic inno</title>
-<style>
-  :root { --bg:#F4F1EC; --fg:#1B1B1B; --muted:#5E5E5E; --rule:#D9D4CC; --accent:#D52B1E; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg:#1B1B1B; --fg:#F4F1EC; --muted:#A8A8A8; --rule:#3A3A3A; }
-  }
-  * { box-sizing: border-box; }
-  html, body { height: 100%; }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font-family: "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
-    display: flex; flex-direction: column; min-height: 100vh;
-    -webkit-font-smoothing: antialiased;
-  }
-  main {
-    flex: 1; display: flex; flex-direction: column; justify-content: center;
-    width: 100%; max-width: 640px; margin: 0 auto; padding: 48px 24px;
-  }
-  .logo { width: 260px; max-width: 70%; height: auto; display: block; color: var(--fg); margin-bottom: 64px; }
-  .label {
-    display: inline-flex; align-items: center; gap: 10px;
-    font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--muted); margin: 0 0 20px;
-  }
-  .label::before { content: ""; width: 24px; height: 2px; background: var(--accent); }
-  h1 { font-size: clamp(32px, 6vw, 48px); line-height: 1.1; letter-spacing: -.01em; margin: 0 0 20px; font-weight: 700; }
-  p { font-size: 18px; line-height: 1.6; margin: 0 0 12px; max-width: 34em; }
-  .en { color: var(--muted); font-size: 16px; }
-  .contact { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); font-size: 16px; color: var(--muted); }
-  .contact a { color: var(--fg); font-weight: 600; text-decoration-color: var(--accent); text-underline-offset: 4px; text-decoration-thickness: 2px; }
-  .contact a:hover { color: var(--accent); }
-  footer { max-width: 640px; width: 100%; margin: 0 auto; padding: 0 24px 32px; font-size: 13px; color: var(--muted); }
-  .dot { transform-box: fill-box; transform-origin: center; animation: pulse 2.4s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: .35; } }
-  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
-
-  .bi { font-size: 1.25rem; color: #D52B1E; vertical-align: -0.125em; }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 <main>
@@ -56,7 +20,38 @@
   <p class="en" lang="en">We&#39;ll be back shortly. Our website is currently undergoing maintenance.</p>
   <p class="contact">
   </p>
+
+
+  <section class="leistungen">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 30 600 296" width="100%" role="img" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <title>helvetic inno Leistungen</title>
+  <desc>Sechs Leistungen im Raster: Elektronik, CAD, 3D-Druck, Engineering, Prototyping sowie Software und Code.</desc>
+  <defs>
+  <g id="i-chip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-12" y="-12" width="24" height="24" rx="3"/><path d="M-18-6H-12M-18 0H-12M-18 6H-12M12-6H18M12 0H18M12 6H18M-6-18V-12M0-18V-12M6-18V-12M-6 12V18M0 12V18M6 12V18"/></g>
+  <g id="i-cube" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="0,-17 15,-8 15,9 0,17 -15,9 -15,-8"/><polyline points="-15,-8 0,0 15,-8"/><line x1="0" y1="0" x2="0" y2="17"/></g>
+  <g id="i-print" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="-20" y1="-16" x2="20" y2="-16"/><polygon points="-4,-16 4,-16 0,-6"/><rect x="-12" y="-1" width="24" height="6"/><rect x="-16" y="5" width="32" height="6"/><line x1="-22" y1="15" x2="22" y2="15"/></g>
+  <g id="i-gear" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle r="10"/><circle r="3.5"/><path d="M11 0H16M7.8 7.8L11.3 11.3M0 11V16M-7.8 7.8L-11.3 11.3M-11 0H-16M-7.8-7.8L-11.3-11.3M0-11V-16M7.8-7.8L11.3-11.3"/></g>
+  <g id="i-cycle" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M-12-4A13 13 0 0 1 10-9"/><polyline points="11,-15 10,-8 4,-9"/><path d="M12 4A13 13 0 0 1-10 9"/><polyline points="-11,15 -10,8 -4,9"/><circle r="2.5"/></g>
+  <g id="i-code" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-18" y="-14" width="36" height="28" rx="3"/><line x1="-18" y1="-6" x2="18" y2="-6"/><polyline points="-6,0 -10,4 -6,8"/><polyline points="6,0 10,4 6,8"/><line x1="2" y1="0" x2="-2" y2="8"/></g>
+  </defs>
+  <rect width="680" height="340" fill="#1B1B1B"/>
+  <line x1="40" y1="40" x2="62" y2="40" stroke="#D92B26" stroke-width="2"/>
+  <text x="72" y="45" font-size="13.2" font-weight="600" letter-spacing="1.85" fill="#B5B5B5">INNOVATION · LEISTUNGEN</text>
+  <g stroke="#3A3A3A" stroke-width="1"><line x1="40" y1="76" x2="220" y2="76"/><line x1="250" y1="76" x2="430" y2="76"/><line x1="460" y1="76" x2="640" y2="76"/><line x1="40" y1="204" x2="220" y2="204"/><line x1="250" y1="204" x2="430" y2="204"/><line x1="460" y1="204" x2="640" y2="204"/></g>
+  <g stroke="#D92B26" stroke-width="2"><line x1="40" y1="76" x2="64" y2="76"/><line x1="250" y1="76" x2="274" y2="76"/><line x1="460" y1="76" x2="484" y2="76"/><line x1="40" y1="204" x2="64" y2="204"/><line x1="250" y1="204" x2="274" y2="204"/><line x1="460" y1="204" x2="484" y2="204"/></g>
+  <use href="#i-chip" x="62" y="116" color="#FFFFFF"/><use href="#i-cube" x="272" y="116" color="#FFFFFF"/><use href="#i-print" x="482" y="116" color="#FFFFFF"/>
+  <use href="#i-gear" x="62" y="244" color="#FFFFFF"/><use href="#i-cycle" x="272" y="244" color="#FFFFFF"/><use href="#i-code" x="482" y="244" color="#FFFFFF"/>
+  <g font-size="16" font-weight="700" fill="#FFFFFF"><text x="40" y="168">Elektronik</text><text x="250" y="168">CAD</text><text x="460" y="168">3D-Druck</text><text x="40" y="296">Engineering</text><text x="250" y="296">Prototyping</text><text x="460" y="296">Software &amp; Code</text></g>
+  <g font-size="12" fill="#9A9A9A"><text x="40" y="188">Schaltungen &amp; Leiterplatten</text><text x="250" y="188">3D-Konstruktion</text><text x="460" y="188">Teile &amp; Prototypen</text><text x="40" y="316">Entwicklung</text><text x="250" y="316">Von der Idee zum Muster</text><text x="460" y="316">Programmierung</text></g>
+  </svg>
+  </section>
+
+  
 </main>
+
+
+
+
 <footer>&copy; <span id="y">2026</span> helvetic inno</footer>
 <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
