@@ -1,56 +1,91 @@
 <!doctype html>
 <html lang="de">
 <head>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-<link rel="icon" type="image/x-icon" href="favicon-white.png">
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- noindex entfernen, sobald die Seite inkl. Kontakt live gehen soll -->
 <meta name="robots" content="noindex">
-<title>Wartung · helvetic inno</title>
+<title>helvetic inno · Innovationsbüro</title>
+<meta name="description" content="helvetic inno entwickelt Elektronik, CAD, 3D-Druck und Software aus einer Hand – von der Idee zum funktionierenden Prototyp.">
+<meta property="og:title" content="helvetic inno · Innovationsbüro">
+<meta property="og:description" content="Von der Idee zum funktionierenden Prototyp – Elektronik, CAD, 3D-Druck und Software aus einer Hand.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="favicon-white.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<main>
-  <img src="helvetic-inno-hi-logo-horizontal-weiss.png" alt="helvetic inno" class="logo" width="260">
 
-  <p class="label">Wartung · Maintenance </p>
-  <h1>Wir sind gleich zurück.</h1>
-  <p>Unsere Website wird gerade überarbeitet. Bitte schauen Sie in Kürze wieder vorbei.</p>
-  <p class="en" lang="en">We&#39;ll be back shortly. Our website is currently undergoing maintenance.</p>
-  <p class="contact">
-  </p>
-
-
-  <section class="leistungen" aria-labelledby="leistungen-title">
-  <h2 class="label leistungen-title" id="leistungen-title">Innovation · Leistungen</h2>
-  <svg class="icon-definitions" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-  <g id="i-chip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-12" y="-12" width="24" height="24" rx="3"/><path d="M-18-6H-12M-18 0H-12M-18 6H-12M12-6H18M12 0H18M12 6H18M-6-18V-12M0-18V-12M6-18V-12M-6 12V18M0 12V18M6 12V18"/></g>
-  <g id="i-cube" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="0,-17 15,-8 15,9 0,17 -15,9 -15,-8"/><polyline points="-15,-8 0,0 15,-8"/><line x1="0" y1="0" x2="0" y2="17"/></g>
-  <g id="i-print" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="-20" y1="-16" x2="20" y2="-16"/><polygon points="-4,-16 4,-16 0,-6"/><rect x="-12" y="-1" width="24" height="6"/><rect x="-16" y="5" width="32" height="6"/><line x1="-22" y1="15" x2="22" y2="15"/></g>
-  <g id="i-gear" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle r="10"/><circle r="3.5"/><path d="M11 0H16M7.8 7.8L11.3 11.3M0 11V16M-7.8 7.8L-11.3 11.3M-11 0H-16M-7.8-7.8L-11.3-11.3M0-11V-16M7.8-7.8L11.3-11.3"/></g>
-  <g id="i-cycle" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M-12-4A13 13 0 0 1 10-9"/><polyline points="11,-15 10,-8 4,-9"/><path d="M12 4A13 13 0 0 1-10 9"/><polyline points="-11,15 -10,8 -4,9"/><circle r="2.5"/></g>
-  <g id="i-code" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-18" y="-14" width="36" height="28" rx="3"/><line x1="-18" y1="-6" x2="18" y2="-6"/><polyline points="-6,0 -10,4 -6,8"/><polyline points="6,0 10,4 6,8"/><line x1="2" y1="0" x2="-2" y2="8"/></g>
-  </defs>
-  </svg>
-  <div class="leistungen-grid">
-    <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-chip"/></svg><h3>Elektronik</h3><p>Schaltungen &amp; Leiterplatten</p></article>
-    <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-cube"/></svg><h3>CAD</h3><p>3D-Konstruktion</p></article>
-    <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-print"/></svg><h3>3D-Druck</h3><p>Teile &amp; Prototypen</p></article>
-    <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-gear"/></svg><h3>Engineering</h3><p>Entwicklung</p></article>
-    <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-cycle"/></svg><h3>Prototyping</h3><p>Von der Idee zum Muster</p></article>
-    <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-code"/></svg><h3>Software &amp; Code</h3><p>Programmierung</p></article>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="helvetic inno – Startseite">
+      <img src="helvetic-inno-hi-logo-horizontal-weiss.png" alt="helvetic inno" width="170">
+    </a>
+    <nav aria-label="Hauptnavigation">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#vorgehen">Vorgehen</a>
+      <!-- <a href="#kontakt" class="nav-cta">Kontakt</a> – einfügen, sobald der Kontaktbereich existiert -->
+    </nav>
   </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="container">
+      <p class="label">Innovationsbüro</p>
+      <h1>Von der Idee zum funktionierenden Prototyp.</h1>
+      <p class="lead">helvetic inno entwickelt Elektronik, Mechanik und Software aus einer Hand – vom ersten Konzept bis zum greifbaren Muster.</p>
+      <p class="hero-links"><a class="btn" href="#leistungen">Unsere Leistungen</a></p>
+    </div>
   </section>
 
-  
+  <section class="section" id="leistungen" aria-labelledby="leistungen-title">
+    <div class="container">
+      <p class="label">Leistungen</p>
+      <h2 id="leistungen-title">Was wir für Sie entwickeln</h2>
+
+      <svg class="icon-definitions" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <g id="i-chip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-12" y="-12" width="24" height="24" rx="3"/><path d="M-18-6H-12M-18 0H-12M-18 6H-12M12-6H18M12 0H18M12 6H18M-6-18V-12M0-18V-12M6-18V-12M-6 12V18M0 12V18M6 12V18"/></g>
+        <g id="i-cube" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="0,-17 15,-8 15,9 0,17 -15,9 -15,-8"/><polyline points="-15,-8 0,0 15,-8"/><line x1="0" y1="0" x2="0" y2="17"/></g>
+        <g id="i-print" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="-20" y1="-16" x2="20" y2="-16"/><polygon points="-4,-16 4,-16 0,-6"/><rect x="-12" y="-1" width="24" height="6"/><rect x="-16" y="5" width="32" height="6"/><line x1="-22" y1="15" x2="22" y2="15"/></g>
+        <g id="i-gear" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle r="10"/><circle r="3.5"/><path d="M11 0H16M7.8 7.8L11.3 11.3M0 11V16M-7.8 7.8L-11.3 11.3M-11 0H-16M-7.8-7.8L-11.3-11.3M0-11V-16M7.8-7.8L11.3-11.3"/></g>
+        <g id="i-cycle" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M-12-4A13 13 0 0 1 10-9"/><polyline points="11,-15 10,-8 4,-9"/><path d="M12 4A13 13 0 0 1-10 9"/><polyline points="-11,15 -10,8 -4,9"/><circle r="2.5"/></g>
+        <g id="i-code" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-18" y="-14" width="36" height="28" rx="3"/><line x1="-18" y1="-6" x2="18" y2="-6"/><polyline points="-6,0 -10,4 -6,8"/><polyline points="6,0 10,4 6,8"/><line x1="2" y1="0" x2="-2" y2="8"/></g>
+        </defs>
+      </svg>
+
+      <div class="leistungen-grid">
+        <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-chip"/></svg><h3>Elektronik</h3><p>Schaltungen &amp; Leiterplatten</p></article>
+        <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-cube"/></svg><h3>CAD</h3><p>3D-Konstruktion</p></article>
+        <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-print"/></svg><h3>3D-Druck</h3><p>Teile &amp; Prototypen</p></article>
+        <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-gear"/></svg><h3>Engineering</h3><p>Entwicklung</p></article>
+        <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-cycle"/></svg><h3>Prototyping</h3><p>Von der Idee zum Muster</p></article>
+        <article class="leistung"><svg class="leistung-icon" viewBox="-24 -20 48 40" aria-hidden="true"><use href="#i-code"/></svg><h3>Software &amp; Code</h3><p>Programmierung</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="vorgehen" aria-labelledby="vorgehen-title">
+    <div class="container">
+      <p class="label">Vorgehen</p>
+      <h2 id="vorgehen-title">In vier Schritten zum Muster</h2>
+      <ol class="steps">
+        <li><span class="step-nr">01</span><h3>Idee verstehen</h3><p>Wir klären Ziel, Anforderungen und Rahmenbedingungen Ihres Vorhabens.</p></li>
+        <li><span class="step-nr">02</span><h3>Konzept &amp; Design</h3><p>Schaltung, Konstruktion und Software werden aufeinander abgestimmt entworfen.</p></li>
+        <li><span class="step-nr">03</span><h3>Prototyp bauen</h3><p>Leiterplatten, 3D-Druck und Code werden zu einem funktionierenden Muster.</p></li>
+        <li><span class="step-nr">04</span><h3>Testen &amp; übergeben</h3><p>Wir prüfen den Prototyp, optimieren ihn und übergeben alle Unterlagen.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Kontaktbereich (id="kontakt") folgt, sobald eine Business-Mail vorhanden ist -->
+
 </main>
 
-
-
-
-<footer>&copy; <span id="y">2026</span> helvetic inno</footer>
+<footer class="site-footer">
+  <div class="container">&copy; <span id="y">2026</span> helvetic inno</div>
+</footer>
 <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 </body>
 </html>
