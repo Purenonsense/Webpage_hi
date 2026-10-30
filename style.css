@@ -44,7 +44,32 @@ p { font-size: 17px; line-height: 1.6; margin: 0; }
   position: relative;
 }
 .hero::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(27,27,27,.7), var(--bg) 85%); }
-.hero .container { position: relative; z-index: 1; }
+.hero { overflow: hidden; }
+.hero .container { position: relative; z-index: 2; }
+
+/* Rotating wireframe cube: six bordered faces, no fills */
+.cube-wrap {
+  --s: 220px;
+  position: absolute; z-index: 1; pointer-events: none;
+  top: 50%; right: max(72px, calc((100% - 1100px) / 2 + 72px));
+  width: var(--s); height: var(--s); margin-top: calc(var(--s) / -2);
+  perspective: 1500px;
+}
+.cube { --h: calc(var(--s) / 2); position: relative; width: 100%; height: 100%; transform-style: preserve-3d; animation: cube-spin 26s linear infinite; }
+.cube.inner { --h: calc(var(--s) / 4); position: absolute; inset: 25%; width: auto; height: auto; animation: cube-spin-rev 18s linear infinite; }
+.face { position: absolute; inset: 0; border: 2px solid var(--fg); opacity: .5; }
+.inner .face { border-color: var(--accent); opacity: .9; }
+.f1 { transform: translateZ(var(--h)); }
+.f2 { transform: rotateY(180deg) translateZ(var(--h)); }
+.f3 { transform: rotateY(90deg) translateZ(var(--h)); }
+.f4 { transform: rotateY(-90deg) translateZ(var(--h)); }
+.f5 { transform: rotateX(90deg) translateZ(var(--h)); }
+.f6 { transform: rotateX(-90deg) translateZ(var(--h)); }
+@keyframes cube-spin { from { transform: rotateX(-24deg) rotateY(0deg); } to { transform: rotateX(-24deg) rotateY(360deg); } }
+@keyframes cube-spin-rev { from { transform: rotateX(24deg) rotateY(360deg); } to { transform: rotateX(24deg) rotateY(0deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .cube, .cube.inner { animation: none; transform: rotateX(-24deg) rotateY(35deg); }
+}
 .lead { font-size: clamp(18px, 2.4vw, 22px); color: var(--muted); max-width: 34em; margin-bottom: 36px; }
 .btn {
   display: inline-block; padding: 14px 28px; background: var(--accent); color: #fff;
@@ -81,6 +106,7 @@ p { font-size: 17px; line-height: 1.6; margin: 0; }
 }
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
+  .cube-wrap { --s: 104px; top: auto; bottom: 24px; right: 36px; margin-top: 0; opacity: .45; }
   nav { gap: 12px; }
   nav a { font-size: 12px; letter-spacing: .04em; }
   .lang-switch { font-size: 12px; letter-spacing: .04em; gap: 3px; }
