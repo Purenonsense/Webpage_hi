@@ -24,7 +24,8 @@
     <a href="#top" class="brand" aria-label="helvetic inno – Startseite">
       <img src="helvetic-inno-hi-logo-horizontal-weiss.png" alt="helvetic inno" width="170">
     </a>
-    <nav aria-label="Hauptnavigation">
+    <button class="nav-toggle" type="button" aria-label="Menü" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span></span></button>
+    <nav id="site-nav" aria-label="Hauptnavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#vorgehen">Vorgehen</a>
       <span class="lang-switch"><span aria-current="true">DE</span><a href="en/index.html" hreflang="en" lang="en" aria-label="English version">EN</a></span>
@@ -36,16 +37,6 @@
 <main id="top">
 
   <section class="hero">
-    <div class="cube-wrap" aria-hidden="true">
-      <div class="cube">
-        <span class="face f1"></span><span class="face f2"></span><span class="face f3"></span>
-        <span class="face f4"></span><span class="face f5"></span><span class="face f6"></span>
-        <div class="cube inner">
-          <span class="face f1"></span><span class="face f2"></span><span class="face f3"></span>
-          <span class="face f4"></span><span class="face f5"></span><span class="face f6"></span>
-        </div>
-      </div>
-    </div>
     <div class="container">
       <p class="label">Innovationsbüro</p>
       <h1>Aus Ihrer Idee wird ein Produkt.</h1>
@@ -101,6 +92,16 @@
 <footer class="site-footer">
   <div class="container">&copy; <span id="y">2026</span> helvetic inno</div>
 </footer>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+<script>
+document.getElementById("y").textContent = new Date().getFullYear();
+(function () {
+  var header = document.querySelector(".site-header");
+  var btn = header.querySelector(".nav-toggle");
+  function set(open) { header.classList.toggle("open", open); btn.setAttribute("aria-expanded", open); }
+  btn.addEventListener("click", function () { set(!header.classList.contains("open")); });
+  header.querySelectorAll("nav a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+})();
+</script>
 </body>
 </html>
