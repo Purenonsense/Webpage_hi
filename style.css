@@ -63,6 +63,9 @@ p { font-size: 17px; line-height: 1.6; margin: 0; }
 .section { padding: clamp(56px, 9vw, 104px) 0; }
 .section-alt { background: var(--bg-alt); border-top: 1px solid var(--rule); }
 
+.video { margin: 0 0 56px; }
+.video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; border: 1px solid var(--rule); }
+
 .icon-definitions { position: absolute; width: 0; height: 0; overflow: hidden; }
 .leistungen-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 32px; }
 .leistung { min-width: 0; padding-top: 20px; border-top: 1px solid var(--rule); position: relative; }

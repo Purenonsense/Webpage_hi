@@ -50,6 +50,13 @@
       <p class="label">Leistungen</p>
       <h2 id="leistungen-title">Was wir für Sie entwickeln</h2>
 
+      <figure class="video">
+        <video controls preload="metadata" playsinline aria-label="Unsere Leistungen im Überblick">
+          <source src="media/helveticinno_Intor_DE.mp4#t=0.1" type="video/mp4">
+          Ihr Browser kann dieses Video nicht abspielen.
+        </video>
+      </figure>
+
       <svg class="icon-definitions" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
         <defs>
         <g id="i-chip" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="-12" y="-12" width="24" height="24" rx="3"/><path d="M-18-6H-12M-18 0H-12M-18 6H-12M12-6H18M12 0H18M12 6H18M-6-18V-12M0-18V-12M6-18V-12M-6 12V18M0 12V18M6 12V18"/></g>
@@ -101,6 +108,22 @@ document.getElementById("y").textContent = new Date().getFullYear();
   btn.addEventListener("click", function () { set(!header.classList.contains("open")); });
   header.querySelectorAll("nav a").forEach(function (a) { a.addEventListener("click", function () { set(false); }); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") set(false); });
+})();
+
+// Play the intro video (muted, as browsers require) while it is on screen
+(function () {
+  var v = document.querySelector(".video video");
+  if (!v || !("IntersectionObserver" in window) || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var userPaused = false, autoPaused = false;
+  v.muted = true;
+  v.addEventListener("play", function () { userPaused = false; });
+  v.addEventListener("pause", function () { if (!autoPaused && !v.ended) userPaused = true; autoPaused = false; });
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { if (!userPaused && !v.ended) v.play().catch(function () {}); }
+      else if (!v.paused) { autoPaused = true; v.pause(); }
+    });
+  }, { threshold: 0.5 }).observe(v);
 })();
 </script>
 </body>
